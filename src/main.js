@@ -4,18 +4,10 @@
 // tui - pagination(https://www.npmjs.com/package/tui-pagination),
 // Запити робимо використовуючи бібліотеку axios (https://www.npmjs.com/package/axios , https://axios-http.com/uk/docs/intro)
 // і конструкції async\await; try\catch
+//https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey={apikey}"
 
 
 
-import axios from 'axios';
-
-const API_KEY = 'uHSLi07StIOlriMPxJGxUbSYsHDs6AFx'
-const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/';
-
-
-async function feachData (page){
-    const response = await axios.get(`${BASE_URL}/events.json?page=${page}&apikey=${API_KEY}`)
-    console.log(response.data);
-    return response.data;
-}
-feachData(1);
+import "./js/api";
+import "./js/event";
+import "./js/pagination";
